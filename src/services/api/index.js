@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-class Api {
+export class Api {
 
     constructor(url, method, data = null) {
         this._url = url;
@@ -8,7 +7,7 @@ class Api {
         this._data = data;
         this._axios = axios.create({
             timeout: 1000,
-            baseURL: process.env.API_URL
+            baseURL: process.env.REACT_APP_API_URL
         });
     }
 
