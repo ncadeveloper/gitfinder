@@ -6,8 +6,12 @@ html, body, #root {
     font-family: Roboto;
 }
 
+input:focus {
+    outline: none !important;
+}
+
 :root {
-    --color-header: '#24292E';
-    --color-section: '#F6F8FA';
-    --color-footer: '#FFFFFF';
+    --color-header: #F3F3F3;
+    --color-header-dark: #24292E;
+    --color-footer: #F6F8FA;
 }

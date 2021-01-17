@@ -1,37 +1,65 @@
-#header {
-    width: 100%;
-    height: 62px;
-    display: flex;
-    align-items: center;
-    background-color: #24292E;
+@font-face {
+    font-family: 'Google';
+    src: url('../../assets/CaviarDreams_Bold.ttf');
 }
 
-#section {
+#home {
     width: 100%;
     position: relative;
     height: calc(100vh - 112px);
-    background-color: #F6F8FA;
+    background-color: #FFFFFF;
 }
 
-#breadcrumb {
+#home .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#home .title {
     width: 100%;
     display: flex;
-    font-size: 1.5rem;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    margin-top: 8%;
+    margin-bottom: 30px;
 }
 
-#breadcrumb .page {
-    margin: 10px 20px;
+#home .title .title__text {
+    margin: 0;
+    font-size: 4.5rem;
+    font-family: Google;
 }
 
-#breadcrumb .path {
-    display: flex;
-    margin: 10px 20px;
-    list-style-type: none;
-}
-
-#footer {
+#home .search {
     width: 100%;
-    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home .search__border {
+    display: flex;
+    padding: 8px 10px;
+    border-radius: 100px;
+    align-items: center;
+    border: 1px solid #c6c6c6;
+}
+
+#home .search__border:hover {
+    border: none;
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+}
+
+#home .search__image {
+    width: 25px;
+    height: 25px;
+}
+
+#home .search__input {
+    border: none;
+    width: 470px;
+    font-size: 1.5rem;
+    padding-left: 10px;
 }

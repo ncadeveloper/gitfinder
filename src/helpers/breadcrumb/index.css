@@ -1,0 +1,17 @@
+#breadcrumb {
+    width: 100%;
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#breadcrumb .page {
+    margin: 10px 20px;
+}
+
+#breadcrumb .path {
+    display: flex;
+    margin: 10px 20px;
+    list-style-type: none;
+}
