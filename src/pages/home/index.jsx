@@ -1,21 +1,24 @@
 import './index.css';
-import ApiRoutes from '../../constants/api';
-
-import { useEffect } from 'react';
-
-import { Api } from '../../services';
+import Logo from '../../assets/icon_github.svg'
 
 export const Home = () => {
-    useEffect(() => {
-        const api = new Api(ApiRoutes.USERS, 'get');
-        api.exec().then(res => {
-            console.log(res);
-        });
-    }, []);
-    console.log(process.env);
     return(
-        <div>
-            as
-        </div>
+        <>
+            <header id="header">
+
+            </header>
+            <section id="section">
+                <nav id="breadcrumb">
+                    <span className="page">Home</span>
+                    <ol className="path">
+                        <li>/</li>
+                    </ol>
+                </nav>
+                
+            </section>
+            <footer id="footer">
+
+            </footer>
+        </>
     )
 };
