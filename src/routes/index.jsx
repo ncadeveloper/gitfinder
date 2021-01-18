@@ -1,4 +1,4 @@
-import { HashRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import { Home, Search } from '../pages';
 
@@ -11,5 +11,6 @@ export const Router = () =>
             <Route path="/search/:query">
                 <Search/>
             </Route>
+            <Redirect to='/' />
         </Switch>
     </HashRouter>
