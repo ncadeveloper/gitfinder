@@ -1,14 +1,13 @@
 import './index.css';
-import IconSearch from '../../assets/icon_search.svg';
 
 import { useHistory } from 'react-router-dom';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, createRef } from 'react';
 
-import { Header, Footer, Breadcrumb } from '../../helpers';
+import { Header, Footer, Breadcrumb, Input } from '../../helpers';
 
 export const Home = () => {
     const history = useHistory();
-    const refInputSearch = useRef(null);
+    const refInputSearch = createRef();
     const [ search, setSearch ] = useState('');
     
     const onKeyUp = e => {
@@ -30,17 +29,12 @@ export const Home = () => {
                         <h1 className="title__text">Gitfinder</h1>
                     </div>
                     <div className="search"> 
-                        <div className="search__border" data-aos="zoom-in">
-                            <img className="search__image" src={IconSearch} alt="Search" />
-                            <input 
-                                type="text"  
-                                value={search}
-                                onKeyUp={onKeyUp}
-                                ref={refInputSearch}
-                                className="search__input"
-                                onChange={e => setSearch(e.target.value)}
-                            />
-                        </div>
+                        <Input 
+                            value={search}
+                            onKeyUp={onKeyUp}
+                            ref={refInputSearch}
+                            onChange={e => setSearch(e.target.value)}
+                        />
                     </div>
                     <div>
                         

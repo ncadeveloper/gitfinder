@@ -1,0 +1,31 @@
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search__border {
+    display: flex;
+    padding: 8px 10px;
+    border-radius: 100px;
+    align-items: center;
+    border: 1px solid #c6c6c6;
+}
+
+.search__border:hover {
+    border: none;
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+}
+
+.search__image {
+    width: 25px;
+    height: 25px;
+}
+
+.search__input {
+    border: none;
+    width: 470px;
+    font-size: 1.5rem;
+    padding-left: 10px;
+}

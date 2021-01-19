@@ -2,13 +2,14 @@ import './index.css';
 import Routes from '../../constants/api';
 
 import { useParams, useHistory } from 'react-router-dom';
-import { useEffect, useState } from 'react'; 
+import { useEffect, useState, createRef } from 'react'; 
 
 import { Api } from '../../services';
-import { Header, Footer, Breadcrumb, Card } from '../../helpers';
+import { Header, Footer, Breadcrumb, Card, Input } from '../../helpers';
 
 export const Search = () => {
     const history = useHistory();
+    const refInputSearch = createRef();
     const { query } = useParams();
     const [ repos, setRepos ] = useState([]);
     const [ isRepos, setIsRepos ] = useState(true);
@@ -19,9 +20,6 @@ export const Search = () => {
             .then(({ data }) => {
                 setRepos(data);
             })
-            .catch(err => {
-                
-            })
             .finally(() => {
                 setIsRepos(false);
             });
@@ -30,23 +28,29 @@ export const Search = () => {
     useEffect(() => {
          _getRepos();
     }, [query]);
-    console.log(repos);
+
     return(
         <>
-            <Header dark />
+            <Header dark >
+                <Input 
+                    ref={refInputSearch}
+                />
+            </Header>
             <section id="search">
                 <Breadcrumb page="Search" />
                 <div className="container">
                     {
                         isRepos 
-                            ? <span>loading...</span>
+                            ? <span className="loader">loading...</span>
                             : 
                             <>
                             {repos.items.map(repo => 
                                 <Card 
                                     key={repo.id}
                                     title={repo.login}
+                                    type={repo.type}
                                     image={repo.avatar_url}
+                                    onClick={() => console.log(repo)}
                                 />   
                             )}
                             </>

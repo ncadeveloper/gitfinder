@@ -10,4 +10,28 @@
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+#header .search__border {
+    height: 18px;
+    margin-left: 30px;
+}
+
+#header .search__input {
+    width: 200px;
+    color: white;
+    font-size: 1rem;
+    transition: width 200ms;
+    background-color: var(--color-header-dark);
+}
+
+#header .search__input:hover {
+    width: 300px;
+    transition: width 200ms;
+}
+
+#header .search__border:hover {
+    border: 1px solid white;
+    box-shadow: 0 1px 6px rgba(255,255,255,.28);
 }
