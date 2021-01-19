@@ -10,7 +10,7 @@ import { Header, Footer, Breadcrumb, Card, Input } from '../../helpers';
 export const Search = () => {
     const history = useHistory();
     const refInputSearch = createRef();
-    const { query } = useParams();
+    const { type, query } = useParams();
     const [ repos, setRepos ] = useState([]);
     const [ isRepos, setIsRepos ] = useState(true);
 
@@ -27,7 +27,7 @@ export const Search = () => {
 
     useEffect(() => {
          _getRepos();
-    }, [query]);
+    }, []);
 
     return(
         <>
@@ -50,8 +50,8 @@ export const Search = () => {
                                     title={repo.login}
                                     type={repo.type}
                                     image={repo.avatar_url}
-                                    onClick={() => console.log(repo)}
-                                />   
+                                    onClick={() => history.push(`/details/${repo.login}`)}
+                                />
                             )}
                             </>
                     }
