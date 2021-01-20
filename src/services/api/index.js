@@ -6,7 +6,7 @@ export class Api {
         this._method = method;
         this._data = data;
         this._axios = axios.create({
-            timeout: 1000,
+            timeout: 9000,
             baseURL: process.env.REACT_APP_API_URL
         });
     }
