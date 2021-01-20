@@ -29,7 +29,6 @@ export const Details = () => {
         _getDetails();
     }, []);
 
-    console.log(details, repos);
     return(
         <>
             <Header dark />

@@ -62,15 +62,15 @@ export const Search = () => {
                             : 
                             <>
                             {
-                                repos?.items.length > 0 
+                                repos?.items.length > 0
                                     ? repos?.items.map(repo => 
                                         <Card 
                                             key={repo.id}
                                             title={isType ? repo.login : repo.name}
                                             type={isType ? repo.type : repo.language}
                                             image={isType ? repo.avatar_url : repo.owner.avatar_url}
-                                            onClick={() =>
-                                                history.push(`/details/${isType ? repo.login : repos.owner.login}`)}
+                                            onClick={() =>{
+                                                history.push(`/details/${isType ? repo.login : repo.owner.login}`)}}    
                                         />
                                     )
                                     : <span className="loader">404 Not found ;-;</span>
