@@ -1,6 +1,73 @@
 #details {
     width: 100%;
     position: relative;
-    height: calc(100vh - 112px);
     background-color: #FFFFFF;
+    min-height: calc(100vh - 112px);
+}
+
+#details .profile {
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    border-radius: 20px;
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+}
+
+#details .profile .profile__image {
+    margin: 20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+}
+
+#details .profile .profile__info {
+    margin: 20px;
+}
+
+#details .repos {
+    max-height: 550px;
+    margin: 30px;
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    justify-content: center;
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+}
+
+#details .repos .card {
+    width: 230px;
+    height: 200px;
+    display: flex;
+    padding: 6px;
+    border-radius: 8px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+}
+
+#details .repos .card .title {
+    margin: 0;
+    width: 200px; 
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+}
+
+#details .repos .card .desc {
+    margin: 0;
+    color: #555555;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+#details .repos .card .link {
+    text-decoration: none; 
 }
