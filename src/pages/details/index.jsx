@@ -35,7 +35,7 @@ export const Details = () => {
             <Header dark />
             <section id="details">
                 <Breadcrumb page="Details" />
-                <div className="profile">
+                <div className="profile" data-aos="fade-up">
                     <img className="profile__image" src={details?.avatar_url} alt="Profile"/>
                     <div className="profile__info">
                         <p>{details?.name}</p>
